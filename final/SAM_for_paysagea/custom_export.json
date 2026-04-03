@@ -1,0 +1,1388 @@
+{
+  "image_info": {
+    "width": 535,
+    "height": 356
+  },
+  "objects": [
+    {
+      "id": 0,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.5927,
+        "width": 1.0,
+        "height": 0.4045
+      },
+      "center": {
+        "x": 0.4999,
+        "y": 0.8467
+      },
+      "area_percentage": 28.64
+    },
+    {
+      "id": 1,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.4037,
+        "height": 0.5674
+      },
+      "center": {
+        "x": 0.1872,
+        "y": 0.2707
+      },
+      "area_percentage": 20.03
+    },
+    {
+      "id": 2,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.5178,
+        "y": 0.0028,
+        "width": 0.2636,
+        "height": 0.4888
+      },
+      "center": {
+        "x": 0.6558,
+        "y": 0.2449
+      },
+      "area_percentage": 8.58
+    },
+    {
+      "id": 3,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.2669,
+        "width": 0.2486,
+        "height": 0.2725
+      },
+      "center": {
+        "x": 0.1183,
+        "y": 0.4051
+      },
+      "area_percentage": 6.24
+    },
+    {
+      "id": 4,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.3776,
+        "y": 0.0,
+        "width": 0.2037,
+        "height": 0.427
+      },
+      "center": {
+        "x": 0.4706,
+        "y": 0.1654
+      },
+      "area_percentage": 5.41
+    },
+    {
+      "id": 5,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2075,
+        "y": 0.0,
+        "width": 0.7925,
+        "height": 0.2135
+      },
+      "center": {
+        "x": 0.795,
+        "y": 0.0728
+      },
+      "area_percentage": 4.94
+    },
+    {
+      "id": 6,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.2673,
+        "height": 0.2416
+      },
+      "center": {
+        "x": 0.1143,
+        "y": 0.1137
+      },
+      "area_percentage": 4.65
+    },
+    {
+      "id": 7,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.5757,
+        "y": 0.0,
+        "width": 0.4243,
+        "height": 0.2135
+      },
+      "center": {
+        "x": 0.8589,
+        "y": 0.0785
+      },
+      "area_percentage": 4.27
+    },
+    {
+      "id": 8,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.7121,
+        "y": 0.0,
+        "width": 0.2879,
+        "height": 0.2163
+      },
+      "center": {
+        "x": 0.8659,
+        "y": 0.0784
+      },
+      "area_percentage": 4.14
+    },
+    {
+      "id": 9,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.6561,
+        "y": 0.5393,
+        "width": 0.2,
+        "height": 0.2051
+      },
+      "center": {
+        "x": 0.7535,
+        "y": 0.6331
+      },
+      "area_percentage": 2.74
+    },
+    {
+      "id": 10,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.3645,
+        "y": 0.6096,
+        "width": 0.2,
+        "height": 0.1348
+      },
+      "center": {
+        "x": 0.4689,
+        "y": 0.6743
+      },
+      "area_percentage": 2.23
+    },
+    {
+      "id": 11,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.1159,
+        "y": 0.5421,
+        "width": 0.1607,
+        "height": 0.2051
+      },
+      "center": {
+        "x": 0.1851,
+        "y": 0.6444
+      },
+      "area_percentage": 2.03
+    },
+    {
+      "id": 12,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.7402,
+        "y": 0.5393,
+        "width": 0.1159,
+        "height": 0.1798
+      },
+      "center": {
+        "x": 0.7893,
+        "y": 0.6284
+      },
+      "area_percentage": 1.49
+    },
+    {
+      "id": 13,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.7533,
+        "y": 0.2022,
+        "width": 0.1178,
+        "height": 0.2022
+      },
+      "center": {
+        "x": 0.8058,
+        "y": 0.2905
+      },
+      "area_percentage": 1.46
+    },
+    {
+      "id": 14,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.757,
+        "y": 0.4045,
+        "width": 0.1159,
+        "height": 0.1629
+      },
+      "center": {
+        "x": 0.8171,
+        "y": 0.4773
+      },
+      "area_percentage": 1.32
+    },
+    {
+      "id": 15,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.5478,
+        "width": 0.1402,
+        "height": 0.1011
+      },
+      "center": {
+        "x": 0.0648,
+        "y": 0.5964
+      },
+      "area_percentage": 1.11
+    },
+    {
+      "id": 16,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.5925,
+        "y": 0.6152,
+        "width": 0.0991,
+        "height": 0.1404
+      },
+      "center": {
+        "x": 0.639,
+        "y": 0.684
+      },
+      "area_percentage": 1.06
+    },
+    {
+      "id": 17,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.0393,
+        "y": 0.2725,
+        "width": 0.0393,
+        "height": 0.264
+      },
+      "center": {
+        "x": 0.0572,
+        "y": 0.4031
+      },
+      "area_percentage": 0.93
+    },
+    {
+      "id": 18,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.0785,
+        "y": 0.2781,
+        "width": 0.0374,
+        "height": 0.2556
+      },
+      "center": {
+        "x": 0.0955,
+        "y": 0.4046
+      },
+      "area_percentage": 0.86
+    },
+    {
+      "id": 19,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.1159,
+        "y": 0.2809,
+        "width": 0.0355,
+        "height": 0.2528
+      },
+      "center": {
+        "x": 0.1322,
+        "y": 0.4063
+      },
+      "area_percentage": 0.79
+    },
+    {
+      "id": 20,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.8523,
+        "y": 0.1292,
+        "width": 0.1103,
+        "height": 0.1236
+      },
+      "center": {
+        "x": 0.9088,
+        "y": 0.1801
+      },
+      "area_percentage": 0.76
+    },
+    {
+      "id": 21,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.1514,
+        "y": 0.2837,
+        "width": 0.0336,
+        "height": 0.2444
+      },
+      "center": {
+        "x": 0.167,
+        "y": 0.4057
+      },
+      "area_percentage": 0.74
+    },
+    {
+      "id": 22,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2729,
+        "y": 0.4691,
+        "width": 0.0673,
+        "height": 0.1376
+      },
+      "center": {
+        "x": 0.3032,
+        "y": 0.5414
+      },
+      "area_percentage": 0.71
+    },
+    {
+      "id": 23,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.5944,
+        "y": 0.0,
+        "width": 0.1402,
+        "height": 0.0927
+      },
+      "center": {
+        "x": 0.6703,
+        "y": 0.0361
+      },
+      "area_percentage": 0.69
+    },
+    {
+      "id": 24,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.8243,
+        "y": 0.5646,
+        "width": 0.1084,
+        "height": 0.0983
+      },
+      "center": {
+        "x": 0.8818,
+        "y": 0.6068
+      },
+      "area_percentage": 0.68
+    },
+    {
+      "id": 25,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.1869,
+        "y": 0.2893,
+        "width": 0.0299,
+        "height": 0.2388
+      },
+      "center": {
+        "x": 0.2,
+        "y": 0.4057
+      },
+      "area_percentage": 0.63
+    },
+    {
+      "id": 26,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.9308,
+        "y": 0.2219,
+        "width": 0.0692,
+        "height": 0.1685
+      },
+      "center": {
+        "x": 0.9751,
+        "y": 0.2919
+      },
+      "area_percentage": 0.6
+    },
+    {
+      "id": 27,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2168,
+        "y": 0.2921,
+        "width": 0.0299,
+        "height": 0.2331
+      },
+      "center": {
+        "x": 0.2317,
+        "y": 0.406
+      },
+      "area_percentage": 0.58
+    },
+    {
+      "id": 28,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2019,
+        "y": 0.0,
+        "width": 0.1907,
+        "height": 0.1011
+      },
+      "center": {
+        "x": 0.3293,
+        "y": 0.0306
+      },
+      "area_percentage": 0.53
+    },
+    {
+      "id": 29,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.6411,
+        "y": 0.0,
+        "width": 0.0916,
+        "height": 0.0927
+      },
+      "center": {
+        "x": 0.6879,
+        "y": 0.0381
+      },
+      "area_percentage": 0.48
+    },
+    {
+      "id": 30,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.4748,
+        "y": 0.0,
+        "width": 0.0206,
+        "height": 0.3455
+      },
+      "center": {
+        "x": 0.4857,
+        "y": 0.1759
+      },
+      "area_percentage": 0.48
+    },
+    {
+      "id": 31,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2692,
+        "y": 0.3118,
+        "width": 0.0411,
+        "height": 0.118
+      },
+      "center": {
+        "x": 0.2894,
+        "y": 0.369
+      },
+      "area_percentage": 0.47
+    },
+    {
+      "id": 32,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.8748,
+        "y": 0.4663,
+        "width": 0.1009,
+        "height": 0.0646
+      },
+      "center": {
+        "x": 0.9255,
+        "y": 0.4935
+      },
+      "area_percentage": 0.47
+    },
+    {
+      "id": 33,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2729,
+        "y": 0.5225,
+        "width": 0.0654,
+        "height": 0.0843
+      },
+      "center": {
+        "x": 0.3051,
+        "y": 0.5625
+      },
+      "area_percentage": 0.45
+    },
+    {
+      "id": 34,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.3327,
+        "y": 0.5393,
+        "width": 0.0729,
+        "height": 0.0899
+      },
+      "center": {
+        "x": 0.3655,
+        "y": 0.5795
+      },
+      "area_percentage": 0.43
+    },
+    {
+      "id": 35,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.8243,
+        "y": 0.573,
+        "width": 0.0785,
+        "height": 0.0871
+      },
+      "center": {
+        "x": 0.8656,
+        "y": 0.6091
+      },
+      "area_percentage": 0.42
+    },
+    {
+      "id": 36,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.8636,
+        "y": 0.2022,
+        "width": 0.0766,
+        "height": 0.073
+      },
+      "center": {
+        "x": 0.9007,
+        "y": 0.2356
+      },
+      "area_percentage": 0.36
+    },
+    {
+      "id": 37,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2561,
+        "y": 0.0899,
+        "width": 0.0486,
+        "height": 0.0871
+      },
+      "center": {
+        "x": 0.2792,
+        "y": 0.1338
+      },
+      "area_percentage": 0.36
+    },
+    {
+      "id": 38,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.5562,
+        "width": 0.0542,
+        "height": 0.0871
+      },
+      "center": {
+        "x": 0.0293,
+        "y": 0.5944
+      },
+      "area_percentage": 0.34
+    },
+    {
+      "id": 39,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.271,
+        "y": 0.4663,
+        "width": 0.0673,
+        "height": 0.073
+      },
+      "center": {
+        "x": 0.3004,
+        "y": 0.502
+      },
+      "area_percentage": 0.3
+    },
+    {
+      "id": 40,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.8729,
+        "y": 0.5618,
+        "width": 0.0617,
+        "height": 0.0843
+      },
+      "center": {
+        "x": 0.908,
+        "y": 0.5996
+      },
+      "area_percentage": 0.29
+    },
+    {
+      "id": 41,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2841,
+        "y": 0.3118,
+        "width": 0.0262,
+        "height": 0.118
+      },
+      "center": {
+        "x": 0.2967,
+        "y": 0.3696
+      },
+      "area_percentage": 0.29
+    },
+    {
+      "id": 42,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.3215,
+        "y": 0.3258,
+        "width": 0.028,
+        "height": 0.1039
+      },
+      "center": {
+        "x": 0.3347,
+        "y": 0.3778
+      },
+      "area_percentage": 0.28
+    },
+    {
+      "id": 43,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.9514,
+        "y": 0.5253,
+        "width": 0.0486,
+        "height": 0.0618
+      },
+      "center": {
+        "x": 0.9768,
+        "y": 0.5557
+      },
+      "area_percentage": 0.26
+    },
+    {
+      "id": 44,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.9701,
+        "y": 0.4101,
+        "width": 0.0299,
+        "height": 0.118
+      },
+      "center": {
+        "x": 0.9867,
+        "y": 0.4779
+      },
+      "area_percentage": 0.24
+    },
+    {
+      "id": 45,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.5626,
+        "y": 0.6236,
+        "width": 0.0374,
+        "height": 0.1039
+      },
+      "center": {
+        "x": 0.5802,
+        "y": 0.6649
+      },
+      "area_percentage": 0.24
+    },
+    {
+      "id": 46,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2093,
+        "y": 0.5506,
+        "width": 0.0598,
+        "height": 0.0646
+      },
+      "center": {
+        "x": 0.2394,
+        "y": 0.582
+      },
+      "area_percentage": 0.23
+    },
+    {
+      "id": 47,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.4785,
+        "y": 0.4326,
+        "width": 0.0318,
+        "height": 0.1685
+      },
+      "center": {
+        "x": 0.4938,
+        "y": 0.515
+      },
+      "area_percentage": 0.23
+    },
+    {
+      "id": 48,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.6897,
+        "y": 0.6938,
+        "width": 0.0561,
+        "height": 0.0534
+      },
+      "center": {
+        "x": 0.7136,
+        "y": 0.7177
+      },
+      "area_percentage": 0.23
+    },
+    {
+      "id": 49,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.3047,
+        "y": 0.0,
+        "width": 0.0355,
+        "height": 0.073
+      },
+      "center": {
+        "x": 0.3229,
+        "y": 0.0298
+      },
+      "area_percentage": 0.22
+    },
+    {
+      "id": 50,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.8972,
+        "y": 0.5169,
+        "width": 0.0505,
+        "height": 0.0618
+      },
+      "center": {
+        "x": 0.9213,
+        "y": 0.5449
+      },
+      "area_percentage": 0.22
+    },
+    {
+      "id": 51,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.5308,
+        "y": 0.4157,
+        "width": 0.0336,
+        "height": 0.0843
+      },
+      "center": {
+        "x": 0.5472,
+        "y": 0.4575
+      },
+      "area_percentage": 0.21
+    },
+    {
+      "id": 52,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.6348,
+        "width": 0.1364,
+        "height": 0.0309
+      },
+      "center": {
+        "x": 0.0636,
+        "y": 0.6474
+      },
+      "area_percentage": 0.21
+    },
+    {
+      "id": 53,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2019,
+        "y": 0.0,
+        "width": 0.1028,
+        "height": 0.0337
+      },
+      "center": {
+        "x": 0.2668,
+        "y": 0.0107
+      },
+      "area_percentage": 0.2
+    },
+    {
+      "id": 54,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.5794,
+        "y": 0.4747,
+        "width": 0.0449,
+        "height": 0.0478
+      },
+      "center": {
+        "x": 0.5989,
+        "y": 0.4971
+      },
+      "area_percentage": 0.16
+    },
+    {
+      "id": 55,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2822,
+        "y": 0.1011,
+        "width": 0.0224,
+        "height": 0.0758
+      },
+      "center": {
+        "x": 0.2923,
+        "y": 0.1373
+      },
+      "area_percentage": 0.15
+    },
+    {
+      "id": 56,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.9327,
+        "y": 0.3708,
+        "width": 0.0561,
+        "height": 0.0393
+      },
+      "center": {
+        "x": 0.9597,
+        "y": 0.3881
+      },
+      "area_percentage": 0.15
+    },
+    {
+      "id": 57,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2093,
+        "y": 0.5506,
+        "width": 0.0374,
+        "height": 0.0646
+      },
+      "center": {
+        "x": 0.2295,
+        "y": 0.5781
+      },
+      "area_percentage": 0.15
+    },
+    {
+      "id": 58,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.5645,
+        "y": 0.0,
+        "width": 0.0467,
+        "height": 0.0534
+      },
+      "center": {
+        "x": 0.5837,
+        "y": 0.0215
+      },
+      "area_percentage": 0.15
+    },
+    {
+      "id": 59,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2561,
+        "y": 0.0927,
+        "width": 0.0206,
+        "height": 0.0758
+      },
+      "center": {
+        "x": 0.2655,
+        "y": 0.1295
+      },
+      "area_percentage": 0.14
+    },
+    {
+      "id": 60,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.9495,
+        "y": 0.1011,
+        "width": 0.0505,
+        "height": 0.0674
+      },
+      "center": {
+        "x": 0.9808,
+        "y": 0.1205
+      },
+      "area_percentage": 0.14
+    },
+    {
+      "id": 61,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2692,
+        "y": 0.2837,
+        "width": 0.0598,
+        "height": 0.0253
+      },
+      "center": {
+        "x": 0.2963,
+        "y": 0.2968
+      },
+      "area_percentage": 0.12
+    },
+    {
+      "id": 62,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.4804,
+        "y": 0.4326,
+        "width": 0.0299,
+        "height": 0.0983
+      },
+      "center": {
+        "x": 0.4935,
+        "y": 0.4791
+      },
+      "area_percentage": 0.12
+    },
+    {
+      "id": 63,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.9495,
+        "y": 0.1011,
+        "width": 0.0505,
+        "height": 0.0421
+      },
+      "center": {
+        "x": 0.9795,
+        "y": 0.1172
+      },
+      "area_percentage": 0.12
+    },
+    {
+      "id": 64,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.4617,
+        "y": 0.4831,
+        "width": 0.0299,
+        "height": 0.059
+      },
+      "center": {
+        "x": 0.474,
+        "y": 0.5138
+      },
+      "area_percentage": 0.11
+    },
+    {
+      "id": 65,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.385,
+        "y": 0.5758,
+        "width": 0.0318,
+        "height": 0.0449
+      },
+      "center": {
+        "x": 0.3984,
+        "y": 0.5964
+      },
+      "area_percentage": 0.11
+    },
+    {
+      "id": 66,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.4785,
+        "y": 0.5309,
+        "width": 0.0318,
+        "height": 0.0478
+      },
+      "center": {
+        "x": 0.4944,
+        "y": 0.5503
+      },
+      "area_percentage": 0.11
+    },
+    {
+      "id": 67,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2654,
+        "y": 0.6067,
+        "width": 0.0804,
+        "height": 0.0225
+      },
+      "center": {
+        "x": 0.3035,
+        "y": 0.6155
+      },
+      "area_percentage": 0.11
+    },
+    {
+      "id": 68,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.9354,
+        "width": 0.028,
+        "height": 0.0646
+      },
+      "center": {
+        "x": 0.0089,
+        "y": 0.9758
+      },
+      "area_percentage": 0.1
+    },
+    {
+      "id": 69,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.7383,
+        "y": 0.5169,
+        "width": 0.028,
+        "height": 0.0421
+      },
+      "center": {
+        "x": 0.751,
+        "y": 0.5351
+      },
+      "area_percentage": 0.1
+    },
+    {
+      "id": 70,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.671,
+        "y": 0.7163,
+        "width": 0.0187,
+        "height": 0.0534
+      },
+      "center": {
+        "x": 0.6803,
+        "y": 0.7433
+      },
+      "area_percentage": 0.09
+    },
+    {
+      "id": 71,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.8355,
+        "y": 0.6236,
+        "width": 0.0355,
+        "height": 0.0478
+      },
+      "center": {
+        "x": 0.8547,
+        "y": 0.6424
+      },
+      "area_percentage": 0.09
+    },
+    {
+      "id": 72,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.4804,
+        "y": 0.4775,
+        "width": 0.0299,
+        "height": 0.0506
+      },
+      "center": {
+        "x": 0.4933,
+        "y": 0.4954
+      },
+      "area_percentage": 0.08
+    },
+    {
+      "id": 73,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.6935,
+        "y": 0.1067,
+        "width": 0.0243,
+        "height": 0.0899
+      },
+      "center": {
+        "x": 0.7043,
+        "y": 0.1519
+      },
+      "area_percentage": 0.08
+    },
+    {
+      "id": 74,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.5794,
+        "y": 0.4747,
+        "width": 0.0449,
+        "height": 0.0281
+      },
+      "center": {
+        "x": 0.6008,
+        "y": 0.4861
+      },
+      "area_percentage": 0.08
+    },
+    {
+      "id": 75,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.3308,
+        "y": 0.4803,
+        "width": 0.0916,
+        "height": 0.0197
+      },
+      "center": {
+        "x": 0.3774,
+        "y": 0.4889
+      },
+      "area_percentage": 0.08
+    },
+    {
+      "id": 76,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.0336,
+        "y": 0.0084,
+        "width": 0.043,
+        "height": 0.0309
+      },
+      "center": {
+        "x": 0.0542,
+        "y": 0.0233
+      },
+      "area_percentage": 0.07
+    },
+    {
+      "id": 77,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.6168,
+        "y": 0.5,
+        "width": 0.028,
+        "height": 0.0281
+      },
+      "center": {
+        "x": 0.6308,
+        "y": 0.5128
+      },
+      "area_percentage": 0.07
+    },
+    {
+      "id": 78,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.3196,
+        "y": 0.309,
+        "width": 0.0318,
+        "height": 0.0281
+      },
+      "center": {
+        "x": 0.3343,
+        "y": 0.321
+      },
+      "area_percentage": 0.07
+    },
+    {
+      "id": 79,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.4841,
+        "y": 0.4298,
+        "width": 0.0224,
+        "height": 0.0478
+      },
+      "center": {
+        "x": 0.4939,
+        "y": 0.4484
+      },
+      "area_percentage": 0.06
+    },
+    {
+      "id": 80,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.9757,
+        "y": 0.1854,
+        "width": 0.0243,
+        "height": 0.0365
+      },
+      "center": {
+        "x": 0.9888,
+        "y": 0.2049
+      },
+      "area_percentage": 0.06
+    },
+    {
+      "id": 81,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.4729,
+        "y": 0.5927,
+        "width": 0.028,
+        "height": 0.0225
+      },
+      "center": {
+        "x": 0.4868,
+        "y": 0.6025
+      },
+      "area_percentage": 0.05
+    },
+    {
+      "id": 82,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.8093,
+        "y": 0.7247,
+        "width": 0.043,
+        "height": 0.0253
+      },
+      "center": {
+        "x": 0.8282,
+        "y": 0.7363
+      },
+      "area_percentage": 0.05
+    },
+    {
+      "id": 83,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.7252,
+        "y": 0.7556,
+        "width": 0.0355,
+        "height": 0.0281
+      },
+      "center": {
+        "x": 0.742,
+        "y": 0.7669
+      },
+      "area_percentage": 0.05
+    },
+    {
+      "id": 84,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.1963,
+        "y": 0.4747,
+        "width": 0.0224,
+        "height": 0.0309
+      },
+      "center": {
+        "x": 0.2071,
+        "y": 0.4882
+      },
+      "area_percentage": 0.05
+    },
+    {
+      "id": 85,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.415,
+        "y": 0.764,
+        "width": 0.0187,
+        "height": 0.0562
+      },
+      "center": {
+        "x": 0.4253,
+        "y": 0.7945
+      },
+      "area_percentage": 0.05
+    },
+    {
+      "id": 86,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.6598,
+        "y": 0.4101,
+        "width": 0.0206,
+        "height": 0.0281
+      },
+      "center": {
+        "x": 0.669,
+        "y": 0.4222
+      },
+      "area_percentage": 0.05
+    },
+    {
+      "id": 87,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.4542,
+        "y": 0.9354,
+        "width": 0.0336,
+        "height": 0.0197
+      },
+      "center": {
+        "x": 0.4716,
+        "y": 0.9444
+      },
+      "area_percentage": 0.05
+    },
+    {
+      "id": 88,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.2187,
+        "y": 0.0674,
+        "width": 0.0243,
+        "height": 0.0281
+      },
+      "center": {
+        "x": 0.228,
+        "y": 0.0824
+      },
+      "area_percentage": 0.04
+    },
+    {
+      "id": 89,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.7196,
+        "y": 0.9438,
+        "width": 0.0206,
+        "height": 0.0225
+      },
+      "center": {
+        "x": 0.7297,
+        "y": 0.9536
+      },
+      "area_percentage": 0.03
+    },
+    {
+      "id": 90,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.4336,
+        "y": 0.8596,
+        "width": 0.028,
+        "height": 0.014
+      },
+      "center": {
+        "x": 0.4464,
+        "y": 0.8646
+      },
+      "area_percentage": 0.03
+    },
+    {
+      "id": 91,
+      "class": "unknown",
+      "bbox": {
+        "x": 0.7626,
+        "y": 0.8539,
+        "width": 0.0112,
+        "height": 0.014
+      },
+      "center": {
+        "x": 0.7673,
+        "y": 0.8592
+      },
+      "area_percentage": 0.01
+    }
+  ]
+}

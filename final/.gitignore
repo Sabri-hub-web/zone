@@ -1,0 +1,10 @@
+# Artefacts d’exécution (à ne pas versionner une fois le dossier utilisé)
+garden_ia_3/outputs/
+**/pipeline_results/
+**/Outputs/
+*.pth
+__pycache__/
+*.pyc
+.venv/
+*.npy
+!**/data/*.json

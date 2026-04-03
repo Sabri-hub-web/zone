@@ -1,0 +1,144 @@
+{
+  "version": "final_scene_input_v1",
+  "created_at": "2026-04-03T04:33:57.515453Z",
+  "image": {
+    "image_id": "uploaded_garden-400x225",
+    "image_filename": "uploaded_garden-400x225.jpg",
+    "image_size": [
+      400,
+      225
+    ]
+  },
+  "vision": {
+    "version": "vision_output_v0",
+    "image_id": "sha256:a573f6e7588c127c",
+    "image_info": {
+      "width": 400,
+      "height": 225
+    },
+    "depth": {
+      "near_is_one": true,
+      "bands": {
+        "front": [
+          0.66,
+          1.0
+        ],
+        "mid": [
+          0.33,
+          0.66
+        ],
+        "back": [
+          0.0,
+          0.33
+        ]
+      }
+    },
+    "zones": {
+      "lower_area": {
+        "coverage": 0.46,
+        "confidence": 0.7,
+        "meaning": "Zone basse de l'image (souvent sol)."
+      },
+      "mid_area": {
+        "coverage": 0.29,
+        "confidence": 0.6,
+        "meaning": "Zone centrale (souvent fond / éléments verticaux)."
+      },
+      "upper_area": {
+        "coverage": 0.25,
+        "confidence": 0.9,
+        "meaning": "Zone haute (souvent ciel / haut de végétation)."
+      }
+    },
+    "constraints": {
+      "forbidden_areas": [
+        "upper_area"
+      ],
+      "notes": [
+        "Ne pas placer d'éléments dans la zone haute.",
+        "Préférer les anchors de lower_area pour des objets au sol."
+      ]
+    },
+    "anchors": [
+      {
+        "id": "a1",
+        "x": 0.49,
+        "y": 0.8,
+        "area": "lower_area",
+        "depth_band": "mid",
+        "score": 0.81
+      }
+    ]
+  },
+  "user_zone": {
+    "version": "user_zone_v1",
+    "image_id": "uploaded_garden-400x225",
+    "image_filename": "uploaded_garden-400x225.jpg",
+    "image_size": [
+      400,
+      225
+    ],
+    "zones": [
+      {
+        "zone_id": 0,
+        "mode": "polygon",
+        "label": "plantable_zone_1",
+        "bbox": [
+          262.0,
+          134.0,
+          134.0,
+          87.0
+        ],
+        "centroid": [
+          341.14571776484917,
+          175.56974698958192
+        ],
+        "area_pixels": 7391,
+        "polygon_points": [
+          [
+            923.0,
+            401.0
+          ],
+          [
+            785.0,
+            444.0
+          ],
+          [
+            1025.0,
+            660.0
+          ],
+          [
+            1186.0,
+            659.0
+          ],
+          [
+            1182.0,
+            467.0
+          ],
+          [
+            925.0,
+            399.0
+          ]
+        ],
+        "mask_rle": {
+          "size": [
+            225,
+            400
+          ],
+          "counts": "jfi11P71O1N2O1O0O2O1O1N2O1O1N2O1O1O0O2O1O1N2O1O1N2O1O1N101O1O1N2O1O1N2O1O1N101O1N2O1O1N2O1O1O1N101O1O1O1O100O1O1O10O01O1O100O1O1O100O1O010O1O1O100O1O1O100O001O100O1O10O0000001O0000001O0000001O0000001O00001O0000001O00000O2O0000001O00001O0000001O0000001O0000001O0000001O00X1hNPf0"
+        },
+        "created_at": "2026-04-03T04:33:54.225431Z"
+      }
+    ]
+  },
+  "user_zone_union": {
+    "mask_rle": {
+      "size": [
+        225,
+        400
+      ],
+      "counts": "jfi11P71O1N2O1O0O2O1O1N2O1O1N2O1O1O0O2O1O1N2O1O1N2O1O1N101O1O1N2O1O1N2O1O1N101O1N2O1O1N2O1O1O1N101O1O1O1O100O1O1O10O01O1O100O1O1O100O1O010O1O1O100O1O1O100O001O100O1O10O0000001O0000001O0000001O0000001O00001O0000001O00000O2O0000001O00001O0000001O0000001O0000001O0000001O00X1hNPf0"
+    },
+    "num_zones": 1
+  }
+}
