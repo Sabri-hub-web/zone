@@ -90,3 +90,5 @@ python ".\run_full_phase1_b_sam_depth_zone.py" --image ".\Inputs\menphis_depay.j
   - Deja corrige dans l'orchestrateur (prints sans emoji).
 - `cannot write mode RGBA as JPEG`
   - Deja corrige (upload conserve l'extension + conversion RGB cote pipeline).
+
+
