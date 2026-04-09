@@ -25,12 +25,10 @@ def _extract_plants(data: Any) -> tuple[list[dict] | None, str]:
     if isinstance(data, list):
         return data, "B"
     if isinstance(data, dict):
-        if "garden" in data and isinstance(data["garden"], list):
-            return data["garden"], "A"
-        for key in ["plants", "recommendations", "results", "items"]:
+        for key in ["garden", "jardin", "plants", "recommendations", "results", "items"]:
             val = data.get(key)
             if isinstance(val, list):
-                return val, "C"
+                return val, "A" if key in ("garden", "jardin") else "C"
     return None, "?"
 
 
@@ -38,8 +36,10 @@ def _extract_metadata(data: Any) -> dict:
     """Extrait metadata depuis un dict."""
     if not isinstance(data, dict):
         return {}
-    if "metadata" in data and isinstance(data["metadata"], dict):
-        return dict(data["metadata"])
+    # Support clé "metadata" ou "infos" (format collègue RAG)
+    for meta_key in ("metadata", "infos"):
+        if meta_key in data and isinstance(data[meta_key], dict):
+            return dict(data[meta_key])
     result = {}
     for key in ["style", "climat", "climate", "season", "sun_exposure", "water_constraint", "description"]:
         if key in data:

@@ -359,27 +359,24 @@ def build_prompt(plant_density: str, user_description: str, segments: list[dict]
     }
     density_desc = density_map.get(plant_density, "several clearly visible plants")
 
-    # ── 3. Chercher des noms de plantes (mini-RAG fallback) ──
-    plant_names = []
-    try:
-        db_path = Path(__file__).parent / "data" / "jardin_complet.json"
-        if db_path.exists():
-            with open(db_path, encoding="utf-8") as f:
-                db = json.load(f)
-                garden = db.get("garden", [])
-                # On prend quelques plantes au hasard ou selon le climat
-                if "9" in str(env.get("botanical_filter", {}).get("usda_zone", "")):
-                    # Plantes méditerranéennes
-                    med_plants = [p["name"] for p in garden if "Lavandula" in p["name"] or "Rosa" in p["name"] or "Rosmarinus" in p["name"]]
-                    plant_names = med_plants[:5]
-                else:
-                    plant_names = [p["name"] for p in garden[:5]]
-    except:
-        pass
-
+    # ── 3. Charger les plantes depuis rag_output.json (produit par le RAG) ──
     rag_hint = ""
-    if plant_names:
-        rag_hint = f" Include these plants: {', '.join(plant_names)}."
+    try:
+        rag_path = Path(work_dir) / "rag_output.json"
+        if rag_path.exists():
+            from image_generation.utils_rag import load_rag
+            _, plants = load_rag(rag_path)
+            # Filtrer les éléments non-végétaux (fontaines, clôtures, roches...)
+            PLANT_TYPES = {"arbuste", "fleur", "vivace", "graminee", "arbre", "rosier", "haie", "couvre_sol"}
+            plant_names = [
+                p["name"] for p in plants
+                if p.get("name") and p.get("type", "").lower() in PLANT_TYPES
+            ][:6]
+            if plant_names:
+                from image_generation.prompt_builder import RAG_MUST_BE_VISIBLE
+                rag_hint = f" {RAG_MUST_BE_VISIBLE} {', '.join(plant_names)}."
+    except Exception as e:
+        print(f"[RAG] Erreur chargement rag_output.json: {e}")
 
     # Contexte de profondeur
     depth_hint = ""
