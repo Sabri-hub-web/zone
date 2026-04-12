@@ -14,7 +14,7 @@ PLACEMENT_MODE = os.environ.get("PLACEMENT_MODE", "fixed")
 # Defaults add-only : guidance/steps modérés, strength pour préserver la base
 BFL_STEPS = 35
 BFL_GUIDANCE = 35
-BFL_STRENGTH = 0.75
+BFL_STRENGTH = 0.92
 
 
 def get_api_key() -> str:

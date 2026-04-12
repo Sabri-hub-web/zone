@@ -53,38 +53,48 @@ def rle_to_mask(rle_counts: str, height: int, width: int) -> np.ndarray:
     """
     Decode un masque compresse en RLE COCO (format string) en tableau numpy (height, width).
     Retourne un masque binaire uint8 (0/255).
+    Utilise pycocotools si disponible, sinon implémentation manuelle.
     """
-    # Decoder la chaine RLE COCO
-    counts = []
-    val = 0
-    i = 0
-    s = rle_counts
-    while i < len(s):
-        c = ord(s[i]) - 48
-        if c < 0:
-            c += 64
-        val |= (c & 0x1F) << (5 * len(counts) % 35)
-        if c < 32:
-            if len(counts) % 2 == 0:
-                val = -val if (val & 1) else val
-            counts.append(val)
-            val = 0
-        i += 1
+    try:
+        from pycocotools import mask as coco_mask
+        rle = {"counts": rle_counts.encode(), "size": [height, width]}
+        decoded = coco_mask.decode(rle)  # returns uint8 array of 0/1
+        return (decoded * 255).astype(np.uint8)
+    except ImportError:
+        pass
 
-    # Construire le masque depuis les counts (alternance 0 et 1)
+    # Fallback manuel : décodage COCO RLE string (delta-encoded, 5 bits/byte)
+    # Chaque nombre est delta-encodé par rapport au précédent (sauf le premier).
+    # Bit 5 (32) = continuation, bits 0-4 = données, bit 4 dernier octet = signe.
+    counts = []
+    p = 0
+    s = rle_counts
+    while p < len(s):
+        x = 0
+        k = 0
+        more = True
+        while more:
+            c = ord(s[p]) - 48
+            p += 1
+            more = bool(c & 32)
+            x |= (c & 31) << (5 * k)
+            k += 1
+            if not more and (c & 16):
+                x |= -(1 << (5 * k))
+        if k > 1 and counts:
+            x += counts[-1]
+        counts.append(x)
+
     mask = np.zeros(height * width, dtype=np.uint8)
     pos = 0
     fill = 0
     for cnt in counts:
-        if pos + cnt <= len(mask):
-            if fill:
-                mask[pos:pos + cnt] = 255
+        if fill and pos + cnt <= len(mask):
+            mask[pos:pos + cnt] = 255
         pos += cnt
         fill = 1 - fill
 
-    # Le masque RLE COCO est column-major (Fortran order)
-    mask = mask.reshape((height, width), order='F')
-    return mask
+    return mask.reshape((height, width), order='F')
 
 
 def decode_segment_mask(seg: dict, img_w: int, img_h: int) -> np.ndarray:
@@ -199,8 +209,9 @@ def select_segments_in_zone(
         seg_area = np.sum(seg_bin)
         intersection_ratio = intersection / seg_area if seg_area > 0 else 0.0
 
-        if intersection_ratio < min_intersection_ratio:
-            # Segment majoritairement hors zone
+        zone_coverage = intersection / zone_area if zone_area > 0 else 0.0
+        if intersection_ratio < min_intersection_ratio and zone_coverage < 0.20:
+            # Segment trop peu dans la zone ET couvre moins de 20% de la zone
             continue
 
         selected.append({
@@ -360,21 +371,31 @@ def build_prompt(plant_density: str, user_description: str, segments: list[dict]
     density_desc = density_map.get(plant_density, "several clearly visible plants")
 
     # ── 3. Charger les plantes depuis rag_output.json (produit par le RAG) ──
-    rag_hint = ""
+    plant_block = ""   # bloc mis EN TÊTE de prompt si RAG dispo
+    rag_active = False
     try:
         rag_path = Path(work_dir) / "rag_output.json"
         if rag_path.exists():
             from image_generation.utils_rag import load_rag
+            from image_generation.prompt_builder import _get_visual
             _, plants = load_rag(rag_path)
-            # Filtrer les éléments non-végétaux (fontaines, clôtures, roches...)
             PLANT_TYPES = {"arbuste", "fleur", "vivace", "graminee", "arbre", "rosier", "haie", "couvre_sol"}
-            plant_names = [
-                p["name"] for p in plants
+            valid_plants = [
+                p for p in plants
                 if p.get("name") and p.get("type", "").lower() in PLANT_TYPES
             ][:6]
-            if plant_names:
-                from image_generation.prompt_builder import RAG_MUST_BE_VISIBLE
-                rag_hint = f" {RAG_MUST_BE_VISIBLE} {', '.join(plant_names)}."
+            if valid_plants:
+                # Nom + description visuelle courte pour chaque plante
+                entries = []
+                for p in valid_plants:
+                    name = p["name"]
+                    visual = _get_visual(p)
+                    color = (p.get("color") or "").replace("|", "/")
+                    color_hint = f", {color} color" if color else ""
+                    entries.append(f"{name} ({visual[:80]}{color_hint})")
+                plant_block = "ADD THESE SPECIFIC PLANTS clearly visible in the masked area: " + "; ".join(entries) + "."
+                rag_active = True
+                print(f"[RAG] {len(valid_plants)} plantes chargées pour le prompt")
     except Exception as e:
         print(f"[RAG] Erreur chargement rag_output.json: {e}")
 
@@ -389,14 +410,26 @@ def build_prompt(plant_density: str, user_description: str, segments: list[dict]
     if user_description and user_description.strip():
         desc_hint = f" Ambiance: {user_description.strip()[:200]}."
 
-    prompt = (
-        f"{ADDITIVE_BASE} "
-        f"{ADDITIVE_VISIBLE} "
-        f"{density_desc}.{rag_hint}{depth_hint}{desc_hint} "
-        f"{MASK_CONSTRAINT} "
-        f"{PLACEMENT_REALISTIC} "
-        f"{relaxed_negative}"
-    )
+    if rag_active:
+        # Prompt structuré : plantes EN TÊTE, puis contraintes de préservation
+        prompt = (
+            f"{plant_block} "
+            f"{ADDITIVE_BASE} "
+            f"{MASK_CONSTRAINT} "
+            f"{PLACEMENT_REALISTIC} "
+            f"{depth_hint}{desc_hint} "
+            f"{relaxed_negative}"
+        )
+    else:
+        # Fallback sans RAG : prompt générique
+        prompt = (
+            f"{ADDITIVE_BASE} "
+            f"{ADDITIVE_VISIBLE} "
+            f"{density_desc}.{depth_hint}{desc_hint} "
+            f"{MASK_CONSTRAINT} "
+            f"{PLACEMENT_REALISTIC} "
+            f"{relaxed_negative}"
+        )
     return " ".join(prompt.split())
 
 
