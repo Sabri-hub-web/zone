@@ -410,6 +410,15 @@ def build_prompt(plant_density: str, user_description: str, segments: list[dict]
     if user_description and user_description.strip():
         desc_hint = f" Ambiance: {user_description.strip()[:200]}."
 
+    # Contexte géographique et style depuis latest_project.json
+    context_hint = ""
+    if location and location != "France":
+        context_hint += f" Garden located in {location}."
+    if style:
+        style_str = style[0] if isinstance(style, list) and style else str(style)
+        if style_str and len(style_str) > 3:
+            context_hint += f" Garden style: {style_str[:80]}."
+
     if rag_active:
         # Prompt structuré : plantes EN TÊTE, puis contraintes de préservation
         prompt = (
@@ -417,7 +426,7 @@ def build_prompt(plant_density: str, user_description: str, segments: list[dict]
             f"{ADDITIVE_BASE} "
             f"{MASK_CONSTRAINT} "
             f"{PLACEMENT_REALISTIC} "
-            f"{depth_hint}{desc_hint} "
+            f"{depth_hint}{desc_hint}{context_hint} "
             f"{relaxed_negative}"
         )
     else:
@@ -425,7 +434,7 @@ def build_prompt(plant_density: str, user_description: str, segments: list[dict]
         prompt = (
             f"{ADDITIVE_BASE} "
             f"{ADDITIVE_VISIBLE} "
-            f"{density_desc}.{depth_hint}{desc_hint} "
+            f"{density_desc}.{depth_hint}{desc_hint}{context_hint} "
             f"{MASK_CONSTRAINT} "
             f"{PLACEMENT_REALISTIC} "
             f"{relaxed_negative}"
